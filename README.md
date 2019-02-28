@@ -11,11 +11,12 @@ There are some observation that can be used to prune away the search space
 solution.
 - Instead of putting the block in all possible place in the board we can try all possible tiles of a cube to fit in a particular block. That way instead of trying for 7*7 place we can only
 try max number of tiles of a block (Min: 2 ,Max: 7).
-- Instead of a static block representation we can convert the block into graphs. Each tile from a block will tell which next position will be occupied on the board.
+- Instead of a static block representation we can convert the block into graphs. Each tile from a block will tell which next position will be occupied on the board. As the graph
+generation is tedious, dynamically generate the code in <b>CreatePath.h</b>
 
 <details><summary>Task 1 Solution</summary>
 <p>
-```
+<pre>
 For Hole: H1(0,3):
 1 6 6 # 5 5 5
 1 4 6 6 5 5 3
@@ -27,7 +28,7 @@ For Hole: H1(0,3):
 
 For Hole: H2(1,0):
 1 1 3 3 3 3 3
-# 4 4 6 5 5 5
+\# 4 4 6 5 5 5
 4 4 4 6 6 5 5
 2 4 4 4 6 6 5
 2 2 7 7 7 8 8
@@ -113,7 +114,7 @@ For Hole: H11(6,0):
 5 5 5 4 4 4 3
 5 5 8 4 4 4 3
 5 8 8 8 4 7 3
-# 8 8 8 7 7 7
+\# 8 8 8 7 7 7
 
 For Hole: H12(6,4):
 1 3 3 3 3 3 9
@@ -132,13 +133,13 @@ For Hole: H13(6,5):
 4 6 6 8 8 8 9
 6 6 2 2 8 9 9
 6 2 2 2 2 # 9
-```
+</pre>
 </p>
 </details>
 
 <details><summary>Task 2 Solution</summary>
 <p>
-```
+<pre>
 Total Solution for Hole: H1(0,3): 38
 Total Solution for Hole: H2(1,0): 92
 Total Solution for Hole: H3(1,4): 45
@@ -152,14 +153,14 @@ Total Solution for Hole: H10(5,3): 70
 Total Solution for Hole: H11(6,0): 181
 Total Solution for Hole: H12(6,4): 17
 Total Solution for Hole: H13(6,5): 67
-```
+</pre>
 </p>
 </details>
 
 <details><summary>Task 3 Solution</summary>
 <p>
-```
+<pre>
 All cells can contain holes with a puzzle
-```
+</pre>
 </p>
 </details>
