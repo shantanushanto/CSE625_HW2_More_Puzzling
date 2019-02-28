@@ -1,18 +1,19 @@
 # More puzzling
 
 ### Description
-9 tiles are marked with 1 to 9;
+9 tiles are marked with 1 to 9 from top to bottom, left to right (See question pdf).
 
 ### Observation
 
 There are some observation that can be used to prune away the search space
 
+- Instead of a static block representation we can convert the block into graphs. Each tile from a block will tell which next position will be occupied on the board. As the graph
+generation is tedious, dynamically generate the code in <b>CreatePath.h</b>
 - While putting blocks if a blank space is found where there is no hole and there is no block that can be fitted then we can roll back from that combination. Because there will be no
 solution.
 - Instead of putting the block in all possible place in the board we can try all possible tiles of a cube to fit in a particular block. That way instead of trying for 7*7 place we can only
 try max number of tiles of a block (Min: 2 ,Max: 7).
-- Instead of a static block representation we can convert the block into graphs. Each tile from a block will tell which next position will be occupied on the board. As the graph
-generation is tedious, dynamically generate the code in <b>CreatePath.h</b>
+
 
 <details><summary>Task 1 Solution</summary>
 <p>
