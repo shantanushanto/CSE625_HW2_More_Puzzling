@@ -31,6 +31,8 @@ public:
 
     friend std::ostream &operator<<(std::ostream &os, Block &block);
     Block& operator=(const Block &other);
+
+    static std::vector<Block> getAllBlocks();
 };
 
 Block getBlock1();

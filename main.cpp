@@ -1,16 +1,10 @@
 #include <iostream>
 
-#include "Block.h"
-#include "Board.h"
+#include "Tasks.h"
 
 int main() {
-    Block a = getBlock4();
-    for(int i=0;i<4;i++){
-        std::cout<<a<<std::endl;
-        a.rotate90();
-    }
-
-    Board board(1,1);
-    std::cout<<board<<std::endl;
+    tasks1();
+    tasks2();
+    tasks3();
     return 0;
 }

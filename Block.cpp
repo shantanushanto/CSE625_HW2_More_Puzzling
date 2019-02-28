@@ -61,6 +61,20 @@ int Block::getType() const {
     return type;
 }
 
+std::vector<Block> Block::getAllBlocks() {
+    std::vector<Block> blocks;
+    blocks.push_back(getBlock1());
+    blocks.push_back(getBlock2());
+    blocks.push_back(getBlock3());
+    blocks.push_back(getBlock4());
+    blocks.push_back(getBlock5());
+    blocks.push_back(getBlock6());
+    blocks.push_back(getBlock7());
+    blocks.push_back(getBlock8());
+    blocks.push_back(getBlock9());
+    return blocks;
+}
+
 Block getBlock1() {
 
     const int row = 2, col = 1;
